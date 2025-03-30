@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+            </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/ilhas/style.css">
+    <link rel="shortcut icon" href="Imagens/favicon.png" type="image/x-icon">
+    <title>Mafia Italiana</title>
+</head>
+<body>
+    <header>
+        <a href="/index.html"><img src="Imagens/favicon.png" alt="Logo Mafia Italiana"></a>
+    </header>
+    <nav>
+        <a href="/index.html">HOME</a>
+        <a href="/Ilhas/index.html">NOSSAS ILHAS</a>
+        <a href="/contato/index.html">SUGESTÕES</a>
+    </nav>
+    <main>
+        <h1>Nossas Ilhas no Fortnite</h1>
+
+        <div class="container">
+            <div class="card">
+                <img src="Imagens-ilhas/Freebuild&Racing.png" alt="Ilha Freebuild & Racing">
+                <h2>Freebuild & Racing (por Mafia Italiana)</h2>
+                <div class="conteudo-container">
+                    <p>Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para voce se divertir com seus amigos.</p>
+                </div>
+                <hr>
+                <div class="codigo-ilha">
+                    <p>Código da ilha</p>
+                    <p class="codigo">9167-3135-3941</p>
+                    <br>
+                    <button class="copiar" type="submit" onclick="copyIlhaCode.call(this)">Copiar Código</button>
+                    <hr>
+                </div>
+                <div class="card-botao">
+                    <a href="https://www.fortnite.com/@mafia-italiana"><button type="submit">Favoritar Criador</button></a>
+                </div>
+            </div>               
+        </div>
+
+        <footer>
+            <div id="redes">
+                <a href="http://www.x.com/MafiaItalianaFN"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <hr>
+            <p>Mafia Italiana &copy; 2024 | Todos os direitos reservados</p>
+         </footer>
+
+        <script>
+            function copyIlhaCode() {
+  const button = this;
+  const ilhaCode = button.closest('.card').querySelector('.codigo-ilha p:nth-child(2)').textContent;
+  copyToClipboard(ilhaCode);
+  button.textContent = 'Copiado!';
+  setTimeout(() => {
+    button.textContent = 'Copiar Código';
+  }, 2000);
+}
+         function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+}
+        </script>
+    </main>
+</body>
+</html>

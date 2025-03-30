@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+img {
+    width: 100%;
+    height: 100%;
+}
+header {
+    background-color: #4e1e0b;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    
+}
+
+
+nav {
+    background-color: #f365a3;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Cookie;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}
+main {
+    background-color: #4e1e0b;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cookie;
+    font-size: 50px;
+    padding: 10px;
+    color: #f365a3;
+    background-color: #4e1e0b;
+}
+
+#container {
+    padding: 10px;
+    background-color: #4e1e0b;
+    color: #f365a3;
+    width: auto;
+    margin: auto;
+}
+
+#titulo-container {
+    text-align: center;
+    font-family: Cookie;
+    padding: 10px;
+    font-size: 30px;
+    color: #f365a3;
+}
+
+#conteudo-container {
+    text-align: justify;
+    font-size: 30px;
+    padding: 10px;
+    color: #f365a3;
+
+}
+
+hr {
+    color: #f365a3;
+    margin-top: 10px;
+}
+.membros {
+    text-align: center;
+    padding: 10px;
+    color: white;
+
+}
+
+footer p {
+    background-color: #f365a3;
+    text-align: center;
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Cookie;
+    font-size: 30px;
+}
+
+#redes {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes a {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#redes i {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+#redes i:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}

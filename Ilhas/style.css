@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+img {
+    width: 100%;
+    height: 100%;
+}
+header {
+    background-color: #4e1e0b;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    
+}
+
+
+nav {
+    background-color: #f365a3;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Cookie;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}
+main {
+    background-color: #4e1e0b;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cookie;
+    font-size: 50px;
+    padding: 10px;
+    color: #f365a3;
+    background-color: #4e1e0b;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f365a3;
+    border-radius: 10px;
+    padding: 4px;
+    width: 300px;
+    text-align: center;
+    color: #4e1e0b;
+    font-family: Cookie;
+    font-size: 20px;
+}
+
+.card img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.conteudo-container {
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Cookie;
+    font-size: 30px;
+}
+
+.container hr {
+    margin: 10px;
+}
+
+.codigo-ilha {
+    padding: 10px;
+    color: #4e1e0b;
+    font-family:  Cookie;
+    font-size: 40px;
+}
+
+.codigo {
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Boldonse;
+    font-size: 17px;
+}
+
+.card-botao {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #4e1e0b;
+    border-style: none;
+    color: #f365a3;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Cookie;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.copiar {
+    background-color: #4e1e0b;
+    border-style: none;
+    color: #f365a3;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Cookie;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f365a3;
+    color: #4e1e0b;
+}
+
+footer p {
+    background-color: #f365a3;
+    ;
+    text-align: center;
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Cookie;
+    font-size: 30px;
+}
+
+#redes {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes a {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#redes i {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+#redes i:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}
