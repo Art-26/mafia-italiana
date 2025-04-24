@@ -91,6 +91,21 @@
         document.execCommand('copy');
         document.body.removeChild(textarea);
 }
+            function toggleTexto(button) {
+    const container = button.parentElement;
+    const textoCompleto = container.querySelector('.texto-completo');
+    const textoResumido = container.querySelector('.texto-resumido');
+
+    if (textoCompleto.style.display === "none") {
+        textoCompleto.style.display = "block";
+        textoResumido.style.display = "none";
+        button.textContent = "Ler Menos";
+    } else {
+        textoCompleto.style.display = "none";
+        textoResumido.style.display = "block";
+        button.textContent = "Ler Mais";
+    }
+            }
         </script>
     </main>
 </body>
