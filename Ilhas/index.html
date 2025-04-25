@@ -31,8 +31,7 @@
                 <img src="Imagens-ilhas/Freebuild&Racing.png" alt="Ilha Freebuild & Racing">
                 <h2>Freebuild & Racing (por Mafia Italiana)</h2>
                 <div class="conteudo-container">
-                    <p class="texto-resumido">Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para você se divertir com seus amigos.</p>
-                    <p class="texto-completo">Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para você se divertir com seus amigos. Além disso, você ganhará XP por cada eliminação de jogadores, por minuto jogado e também por percorrer em nosso percurso, tá esperando o que? vá lá jogar!</p>
+                    <p class="ler-mais-texto">Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para você se divertir com seus amigos.</p>
                     <button class="ler-mais" onclick="toggleTexto(this)">Ler Mais!</button>
                 </div>
                 <hr>
@@ -93,22 +92,37 @@
         document.execCommand('copy');
         document.body.removeChild(textarea);
 }
-            function toggleTexto(button) {
-    const container = button.parentElement;
-    const textoCompleto = container.querySelector('.texto-completo');
-    const textoResumido = container.querySelector('.texto-resumido');
+        </script>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const limitePalavras = 30;
 
-    
-    if (textoCompleto.style.display === "none") {
-        textoCompleto.style.display = "block"; 
-        textoResumido.style.display = "none"; 
-        button.textContent = "Ler Menos"; 
+    document.querySelectorAll('.ler-mais-texto').forEach(paragrafo => {
+        const textoOriginal = paragrafo.textContent.trim();
+        const palavras = textoOriginal.split(' ');
+
+        if (palavras.length > limitePalavras) {
+            const resumo = palavras.slice(0, limitePalavras).join(' ');
+            const restante = palavras.slice(limitePalavras).join(' ');
+
+            paragrafo.innerHTML = `
+                ${resumo}<span class="oculto"> ${restante}</span>
+                <button class="ler-mais-btn" onclick="toggleTexto(this)">Ler mais</button>
+            `;
+        }
+    });
+});
+
+function toggleTexto(botao) {
+    const span = botao.previousElementSibling;
+    if (span.classList.contains("oculto")) {
+        span.classList.remove("oculto");
+        botao.textContent = "Ler menos";
     } else {
-        textoCompleto.style.display = "none"; 
-        textoResumido.style.display = "block";
-        button.textContent = "Ler Mais";
+        span.classList.add("oculto");
+        botao.textContent = "Ler mais";
     }
-            }
+}
         </script>
     </main>
 </body>
