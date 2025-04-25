@@ -150,18 +150,18 @@ button:hover {
     color: #4e1e0b;
 }
 
-.ler-mais {
-    background-color: #007BFF;
-    font-family: Boldonse;
+.ler-mais-btn {
+    font-family: 'Boldonse', sans-serif;
+    background-color: #ADD8E6; /* Azul claro */
     color: white;
-    border: none;
     padding: 10px;
+    border: none;
     cursor: pointer;
     margin-top: 10px;
 }
 
-.ler-mais:hover {
-    background-color: #0056b3;
+.oculto {
+    display: none;
 }
 
 footer p {
