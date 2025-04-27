@@ -150,18 +150,35 @@ button:hover {
     color: #4e1e0b;
 }
 
+.ler-mais-container {
+    position: relative;
+    max-height: 6em; /* Altura aproximada para 30 palavras */
+    overflow: hidden;
+}
+
+.ler-mais-container.expanded {
+    max-height: none;
+}
+
+.fade-out {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    background: linear-gradient(to top, white, transparent);
+    pointer-events: none;
+}
+
 .ler-mais-btn {
     font-family: 'Boldonse', sans-serif;
-    background-color: #ADD8E6; /* Azul claro */
+    background-color: #ADD8E6;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
+    display: block;
     margin-top: 10px;
-}
-
-.oculto {
-    display: none;
 }
 
 footer p {
