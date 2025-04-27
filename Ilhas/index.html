@@ -101,33 +101,14 @@
 }
         </script>
         <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const limitePalavras = 30;
+function toggleLerMais(botao) {
+    const container = botao.previousElementSibling;
+    container.classList.toggle('expanded');
 
-    document.querySelectorAll('.ler-mais-texto').forEach(paragrafo => {
-        const textoOriginal = paragrafo.textContent.trim();
-        const palavras = textoOriginal.split(' ');
-
-        if (palavras.length > limitePalavras) {
-            const resumo = palavras.slice(0, limitePalavras).join(' ');
-            const restante = palavras.slice(limitePalavras).join(' ');
-
-            paragrafo.innerHTML = `
-                ${resumo}<span class="oculto"> ${restante}</span>
-                <button class="ler-mais-btn" onclick="toggleTexto(this)">Ler mais</button>
-            `;
-        }
-    });
-});
-
-function toggleTexto(botao) {
-    const span = botao.previousElementSibling;
-    if (span.classList.contains("oculto")) {
-        span.classList.remove("oculto");
-        botao.textContent = "Ler menos";
+    if (container.classList.contains('expanded')) {
+        botao.textContent = 'Ler menos';
     } else {
-        span.classList.add("oculto");
-        botao.textContent = "Ler mais";
+        botao.textContent = 'Ler mais';
     }
 }
         </script>
