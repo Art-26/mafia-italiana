@@ -172,14 +172,15 @@ button:hover {
 
 .ler-mais-btn {
     font-family: 'Boldonse', sans-serif;
+    font-size: 16px;
     background-color: #ADD8E6;
     text-align: center;
     color: white;
-    padding: 10px;
+    padding: 8px 16px;
     border: none;
     cursor: pointer;
     display: block;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
 }
 
 footer p {
