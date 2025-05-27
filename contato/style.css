@@ -34,11 +34,14 @@ header img {
 
 nav {
     background-color: #f365a3;
-    padding: 10px;
+    padding: 0px 10px; /* increased vertical padding */
+    min-height: 50px; /* added min-height to increase nav bar height */
     text-align: center;
+    position: relative;
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
     font-family: Cookie;
     font-size: 30px;
@@ -50,6 +53,71 @@ nav a:hover {
     color: #4e1e0b;
     background-color: #f365a3;
     border-radius: 10px;
+}
+
+/* Hide hamburger button by default */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mobile menu hidden by default */
+#mobile-menu.hidden {
+    display: none;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    background-color: #f365a3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    z-index: 1000;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 10px 0;
+    font-family: Cookie;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid #e07aa0;
+}
+
+#mobile-menu a:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 0;
+}
+
+/* Slide down animation */
+#mobile-menu.slide-down {
+    max-height: 500px; /* enough height to show all links */
+    transition: max-height 0.3s ease-in;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    nav a {
+        display: none; /* hide normal nav links */
+    }
+    #hamburger {
+        display: block; /* show hamburger button */
+    }
 }
 
 main {
