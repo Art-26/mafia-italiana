@@ -21,6 +21,14 @@
         <a href="/index.html">HOME</a>
         <a href="/Ilhas/index.html">NOSSAS ILHAS</a>
         <a href="/contato/index.html">SUGESTÕES</a>
+        <button id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="mobile-menu" class="hidden">
+            <a href="/index.html">HOME</a>
+            <a href="/Ilhas/index.html">NOSSAS ILHAS</a>
+            <a href="/contato/index.html">SUGESTÕES</a>
+        </div>
     </nav>
     <main>
         <h1>Bem vindo a Mafia Italiana!</h1>
@@ -46,6 +54,22 @@
         <p>Mafia Italiana &copy; 2024 | Todos os direitos reservados</p>
      </footer>
     </main>
-    
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+            hamburger.setAttribute('aria-expanded', !expanded);
+            if (!expanded) {
+                hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('slide-down');
+            } else {
+                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('slide-down');
+            }
+        });
+    </script>
 </body>
 </html>
