@@ -20,51 +20,33 @@
     <header>
         <a href="/index.html"><img src="Ilhas/Imagens/Mafia_Italiana_Logo2.png" alt="Logo Mafia Italiana"></a>
     </header>
-    <nav>
+   <nav>
         <a href="/index.html">HOME</a>
         <a href="/Ilhas/index.html">NOSSAS ILHAS</a>
         <a href="/contato/index.html">SUGESTÕES</a>
+        <button id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div id="mobile-menu" class="hidden">
+            <a href="/index.html">HOME</a>
+            <a href="/Ilhas/index.html">NOSSAS ILHAS</a>
+            <a href="/contato/index.html">SUGESTÕES</a>
+        </div>
     </nav>
     <main>
         <h1>Nossas Ilhas no Fortnite</h1>
 
         <div class="container">
             <div class="card">
-                <img src="Ilhas/Imagens-ilhas/Freebuild&Racing.png" alt="Ilha Freebuild & Racing">
+                <img src="Imagens-ilhas/Freebuild&Racing.png" alt="Ilha Freebuild & Racing">
                 <h2>Freebuild & Racing (por Mafia Italiana)</h2>
                 <div class="conteudo-container">
-                    <div class="ler-mais-container">
-  <p>Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para você se divertir com seus amigos.</p>
-  <div class="fade-out"></div>
-</div>
-<button class="ler-mais-btn" onclick="toggleLerMais(this)">Ler mais</button>
+                    <p>Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para voce se divertir com seus amigos.</p>
                 </div>
                 <hr>
                 <div class="codigo-ilha">
                     <p>Código da ilha</p>
                     <p class="codigo">9167-3135-3941</p>
-                    <br>
-                    <button class="copiar" type="submit" onclick="copyIlhaCode.call(this)">Copiar Código</button>
-                    <hr>
-                </div>
-                <div class="card-botao">
-                    <a href="https://www.fortnite.com/@mafia-italiana"><button type="submit">Favoritar Criador</button></a>
-                </div>
-            </div> 
-            <div class="card">
-                <img src="Ilhas/Imagens-ilhas/Just_Freebuild.png" alt="Ilha Just Freebuild">
-                <h2>Just Freebuild (por Mafia Italiana)</h2>
-                <div class="conteudo-container">
-                    <div class="ler-mais-container">
-  <p>Just Freebuild (por Mafia Italiana) consiste em uma nova ilha, onde tem como foco principal apenas o Freebuild, comparado ao Freebuild & Racing, aqui você poderá treinar suas habilidades de construção por toda a ilha e também treinar a sua mira com o nosso sistema de bot para te ajudar a melhorar, e claro, divertir-se com os seus amigos!.</p>
-  <div class="fade-out"></div>
-</div>
-<button class="ler-mais-btn" onclick="toggleLerMais(this)">Ler mais</button>
-                </div>
-                <hr>
-                <div class="codigo-ilha">
-                    <p>Código da ilha</p>
-                    <p class="codigo">5426-9220-5836</p>
                     <br>
                     <button class="copiar" type="submit" onclick="copyIlhaCode.call(this)">Copiar Código</button>
                     <hr>
@@ -103,16 +85,21 @@
 }
         </script>
         <script>
-function toggleLerMais(botao) {
-    const container = botao.previousElementSibling;
-    container.classList.toggle('expanded');
-
-    if (container.classList.contains('expanded')) {
-        botao.textContent = 'Ler menos';
-    } else {
-        botao.textContent = 'Ler mais';
-    }
-}
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobile-menu');
+            hamburger.addEventListener('click', () => {
+                const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+                hamburger.setAttribute('aria-expanded', !expanded);
+                if (!expanded) {
+                    hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('slide-down');
+                } else {
+                    hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('slide-down');
+                }
+            });
         </script>
     </main>
 </body>
