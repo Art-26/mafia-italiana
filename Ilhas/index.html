@@ -41,8 +41,12 @@
                 <img src="/Ilhas/Imagens-ilhas/Freebuild&Racing.png" alt="Ilha Freebuild & Racing">
                 <h2>Freebuild & Racing (por Mafia Italiana)</h2>
                 <div class="conteudo-container">
+                    <div class="ler-mais-container">
                     <p>Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para voce se divertir com seus amigos.</p>
-                </div>
+                    <div class="fade-out"></div>
+                    </div>
+                    <button class="ler-mais-btn" onclick="toogleLerMais(this)">Ler mais</button>
+                    </div>
                 <hr>
                 <div class="codigo-ilha">
                     <p>Código da ilha</p>
@@ -100,6 +104,17 @@
                     mobileMenu.classList.remove('slide-down');
                 }
             });
+        </script>
+        <script>
+            function toogleLerMais(botao) {
+                const container = botao.previousElementSibling;
+                container.classList.toogle('expanded');
+
+                if (container.classList.contains('expanded')) {
+                } else {
+                botao.textContent = 'Ler mais';
+                }
+            }
         </script>
     </main>
 </body>
