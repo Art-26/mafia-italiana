@@ -45,7 +45,7 @@
                     <p>Freebuild & Racing (por Mafia Italiana) é um projeto que consiste em um Freebuild para vocês treinarem e também uma pista de corrida para voce se divertir com seus amigos.</p>
                     <div class="fade-out"></div>
                     </div>
-                    <button class="ler-mais-btn" onclick="toogleLerMais(this)">Ler mais</button>
+                    <button class="ler-mais-btn" onclick="toggleLerMais(this)">Ler mais</button>
                     </div>
                 <hr>
                 <div class="codigo-ilha">
@@ -106,11 +106,12 @@
             });
         </script>
         <script>
-            function toogleLerMais(botao) {
+            function toggleLerMais(botao) {
                 const container = botao.previousElementSibling;
-                container.classList.toogle('expanded');
+                container.classList.toggle('expanded');
 
                 if (container.classList.contains('expanded')) {
+                    botao.textContent = 'Ler menos';
                 } else {
                 botao.textContent = 'Ler mais';
                 }
