@@ -36,6 +36,14 @@
     </nav>
     <main>
         <h1>Nossas Ilhas no Fortnite</h1>
+       
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" placeholder="Pesquisar pelo nome da ilha..." onkeyup="filterIslands()">
+                <i class="fa fa-search search-icon" id="searchIcon" onclick="filterIslands()" aria-label="Pesquisar"></i>
+            </div>
+            <button id="showAllBtn" onclick="showAllIslands()" aria-label="Mostrar todas as ilhas"><i class="fa fa-list"></i></button>
+        </div>
 
         <div class="container">
             <div class="card">
@@ -138,6 +146,30 @@
                 } else {
                 botao.textContent = 'Ler mais';
                 }
+            }
+            function filterIslands() {
+                const input = document.getElementById('searchInput');
+                const filter = input.value.toLowerCase();
+                const container = document.getElementById('islandContainer');
+                const cards = container.getElementsByClassName('card');
+
+                for (let i = 0; i < cards.length; i++) {
+                    const title = cards[i].getElementsByTagName('h2')[0];
+                    if (title.innerText.toLowerCase().indexOf(filter) > -1) {
+                        cards[i].style.display = "";
+                    } else {
+                        cards[i].style.display = "none";
+                    }
+                }
+            }
+
+            function showAllIslands() {
+                const container = document.getElementById('islandContainer');
+                const cards = container.getElementsByClassName('card');
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].style.display = "";
+                }
+                document.getElementById('searchInput').value = "";
             }
         </script>
     </main>
