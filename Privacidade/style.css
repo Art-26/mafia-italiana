@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cookie-regular {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #4e1e0b;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    padding: auto;
+}
+
+nav {
+    background-color: #f365a3;
+    padding: 0px 10px;
+    min-height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Cookie;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}
+
+main {
+    background-color: #4e1e0b;
+}
+
+/* Hide hamburger button by default */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mobile menu hidden by default */
+#mobile-menu.hidden {
+    display: none;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    background-color: #f365a3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    z-index: 1000;
+}
+
+#mobile-menu a {
+    display: block;
+    padding: 10px 0;
+    font-family: Cookie;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid #e07aa0;
+}
+
+#mobile-menu a:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 0;
+}
+
+/* Slide down animation */
+#mobile-menu.slide-down {
+    max-height: 500px; /* enough height to show all links */
+    transition: max-height 0.3s ease-in;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    nav a {
+        display: none; /* hide normal nav links */
+    }
+    #hamburger {
+        display: block; /* show hamburger button */
+    }
+}
+
+main {
+    background-color: #4e1e0b;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cookie;
+    font-size: 50px;
+    padding: 10px;
+    color: #f365a3;
+    background-color: #4e1e0b;
+}
+
+footer p {
+    background-color: #f365a3;
+    text-align: center;
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Boldonse;
+    font-size: 30px;
+}
+
+#redes {
+    text-align: center;
+    padding: 10px;
+}
+
+#redes a {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#redes i {
+    text-decoration: none;
+    color: #f365a3;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#redes i:hover {
+    color: #4e1e0b;
+    background-color: #f365a3;
+    border-radius: 10px;
+}
+
+/* Privacy Policy Content Styling */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f365a3;
+    border-radius: 15px;
+    color: #4e1e0b;
+    font-family: Boldonse, cursive;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+main h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main section {
+    margin-bottom: 25px;
+}
+
+main section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main section h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+main section p, main section ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+main section ul {
+    list-style-type: disc;
+}
+
+main section ul li {
+    margin-bottom: 5px;
+}
+footer p {
+    background-color: #f365a3;
+    ;
+    text-align: center;
+    padding: 10px;
+    color: #4e1e0b;
+    font-family: Cookie;
+    font-size: 30px;
+}
